@@ -1,0 +1,194 @@
+/* VARIABLES */
+/* Navegacion */
+.navCustom {
+  background-color: #1E90FF;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  /* Botones Pixeles */
+}
+.navCustom .navLogoCustom {
+  font-size: 40px;
+}
+.navCustom .btnPixelCustom1,
+.navCustom .btnPixelCustom2,
+.navCustom .btnPixelCustom3 {
+  border: none;
+  border-radius: 10px;
+  margin: 1px;
+  text-align: center;
+  transition: 1s;
+}
+.navCustom .btnPixelCustom1 {
+  background-color: #9932CC;
+}
+.navCustom .btnPixelCustom1:hover {
+  background-color: #FF0080;
+}
+.navCustom .btnPixelCustom2 {
+  background-color: #32CD32;
+}
+.navCustom .btnPixelCustom2:hover {
+  background-color: #00FF7F;
+}
+.navCustom .btnPixelCustom3 {
+  background-color: #FFA500;
+}
+.navCustom .btnPixelCustom3:hover {
+  background-color: #00FF7F;
+}
+
+/* Fin Navegacion */
+/* Index */
+.welcomeCustom {
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+.welcomeCustom .titleCustom {
+  color: black;
+}
+
+/* End Index */
+/* Textos, Titulos, P.*/
+.titleCover {
+  text-align: center;
+  font-size: 100px;
+  font-family: "VT323", monospace;
+  color: #FF0080;
+  background-color: rgba(0, 0, 0, 0.534);
+  height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  line-height: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.titleCover .span {
+  color: #32CD32;
+}
+
+.textSubTituloPixel {
+  text-align: center;
+  font-family: "VT323", monospace;
+  color: #FF0080;
+  font-size: 50px;
+}
+
+.textArcade {
+  font-family: "VT323", monospace;
+  font-size: 35px;
+  color: white;
+  line-height: 30px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.534);
+}
+
+/* FIn Textos, Titulos, P.*/
+/* Background */
+.indexCoverBack {
+  background-image: url("https://images3.alphacoders.com/268/268495.jpg");
+  height: auto;
+  padding-bottom: 100px;
+  background-attachment: fixed;
+}
+.indexCoverBack .textCustom {
+  color: #00FF7F;
+}
+
+.gameBack {
+  background-color: #242424;
+}
+
+.aboutCustom {
+  background-image: url("https://images2.alphacoders.com/715/715676.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Form SignIn */
+.formSignin {
+  background-color: rgba(0, 0, 0, 0.534);
+  /* textos*/
+  /*Botones Custom*/
+}
+.formSignin .formSigninText {
+  font-size: 40px;
+  font-family: "VT323", monospace;
+  color: #FF0080;
+}
+.formSignin .aboutCustom {
+  background-image: url("https://images2.alphacoders.com/715/715676.png");
+  background-size: cover;
+  height: 100vh;
+}
+.formSignin .textCustom {
+  padding: 50px 20px 50px 20px;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  line-height: 25px;
+  width: 80%;
+}
+.formSignin .btnCustom {
+  background-color: #FF0080;
+  border-radius: 20px;
+}
+
+/*Botones Custom */
+.btnCustomLargo {
+  width: 350px;
+}
+
+/* End Botones Custom*/
+/* Box Custom */
+.boxGameCustom {
+  background-color: #242424;
+  box-shadow: 10px 10px #00FF7F;
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+}
+
+.boxUserCustom {
+  background-color: #242424;
+  color: white;
+  text-decoration: none;
+}
+
+.boxUserCustom:hover {
+  background-color: rgba(0, 0, 0, 0.801);
+  color: white;
+  text-decoration: none;
+}
+
+/* End Box Custom */
+/* Section Contact*/
+.sectionContact {
+  background-color: #242424;
+  color: white;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+}
+
+/* End Section Contact*/
+/* Footer */
+.footerCustom {
+  background-color: #242424;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.footerCustomRS {
+  color: #FF0080;
+}
+
+.footerCustomRS:hover {
+  transition: 0.5s;
+  color: #32CD32;
+}
+
+/* End Footer *//*# sourceMappingURL=style.module.css.map */

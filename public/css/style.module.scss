@@ -1,0 +1,229 @@
+/* VARIABLES */
+
+//Fuentes
+$FuentePixel: 'VT323', monospace;
+
+//Paleta de Colores
+
+$rosado-intenso: #FF0080;
+$cian-brillante: #00FFFF;
+$amarillo-dorado: #FFD700;
+$naranja-claro: #FF7F50;
+$verde-lima: #32CD32;
+$morado-oscuro: #9932CC;
+$rosa-intenso: #FF69B4;
+$azul-claro: #1E90FF;
+$naranja-brillante: #FFA500;
+$verde-brillante: #00FF7F;
+$dark: #242424;
+$transparente: rgba(0, 0, 0, 0.534);
+$transparenteOscuro: rgba(0, 0, 0, 0.801);
+$blanco: white;
+$crem: wheat;
+
+/* Navegacion */
+.navCustom {
+    background-color: $azul-claro;
+    font-family: $FuentePixel;
+    font-size: 30px;
+
+    .navLogoCustom {
+        font-size: 40px;
+    }
+
+    /* Botones Pixeles */
+    .btnPixelCustom1,
+    .btnPixelCustom2,
+    .btnPixelCustom3 {
+        border: none;
+        border-radius: 10px;
+        margin: 1px;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .btnPixelCustom1 {
+        background-color: $morado-oscuro;
+
+        &:hover {
+            background-color: $rosado-intenso;
+        }
+    }
+
+    .btnPixelCustom2 {
+        background-color: $verde-lima;
+
+        &:hover {
+            background-color: $verde-brillante;
+        }
+    }
+
+    .btnPixelCustom3 {
+        background-color: $naranja-brillante;
+
+        &:hover {
+            background-color: $verde-brillante;
+        }
+    }
+
+}
+
+/* Fin Navegacion */
+
+/* Index */
+.welcomeCustom{
+    color: white;
+    font-family: $FuentePixel;
+    font-size: 30px;
+    background-color: $transparenteOscuro;
+    .titleCustom{
+        color: black;
+    }
+}
+/* End Index */
+
+/* Textos, Titulos, P.*/
+.titleCover {
+    text-align: center;
+    font-size: 100px;
+    font-family: $FuentePixel;
+    color: $rosado-intenso;
+    background-color: $transparente;
+    height: auto;
+    user-select: none;
+    line-height: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .span {
+        color: $verde-lima;
+    }
+}
+
+.textSubTituloPixel {
+    text-align: center;
+    font-family: $FuentePixel;
+    color: $rosado-intenso;
+    font-size: 50px;
+}
+
+.textArcade {
+    font-family: $FuentePixel;
+    font-size: 35px;
+    color: white;
+    line-height: 30px;
+    padding: 40px;
+    background-color: $transparente;
+}
+
+/* FIn Textos, Titulos, P.*/
+
+/* Background */
+.indexCoverBack {
+    background-image: url("https://images3.alphacoders.com/268/268495.jpg");
+    height: auto;
+    padding-bottom: 100px;
+    //Para que el fondo quede fijo mientras se hace scroll
+    background-attachment: fixed;
+
+    .textCustom {
+        color: #00FF7F;
+    }
+}
+
+.gameBack{
+    background-color: $dark;
+}
+.aboutCustom {
+    background-image: url("https://images2.alphacoders.com/715/715676.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Form SignIn */
+.formSignin {
+
+    background-color: $transparente;
+
+    .formSigninText {
+
+        font-size: 40px;
+        font-family: $FuentePixel;
+        color: $rosado-intenso;
+    }
+
+    .aboutCustom {
+        background-image: url("https://images2.alphacoders.com/715/715676.png");
+        background-size: cover;
+        height: 100vh;
+    }
+
+    /* textos*/
+    .textCustom {
+        padding: 50px 20px 50px 20px;
+        font-family: $FuentePixel;
+        font-size: 30px;
+        line-height: 25px;
+        width: 80%;
+    }
+
+    /*Botones Custom*/
+    .btnCustom {
+        background-color: $rosado-intenso;
+        border-radius: 20px;
+
+    }
+}
+
+/*Botones Custom */
+.btnCustomLargo{
+    width: 350px;
+}
+/* End Botones Custom*/
+
+/* Box Custom */
+.boxGameCustom{
+    background-color: $dark;
+    box-shadow: 10px 10px #00FF7F;
+    color: white;
+    font-family: $FuentePixel;
+    font-size: 20px;
+}
+.boxUserCustom{
+    background-color: $dark;
+    color: white;
+    text-decoration: none;
+}
+.boxUserCustom:hover{
+    background-color: $transparenteOscuro;
+    color: white;
+    text-decoration: none;
+}
+/* End Box Custom */
+
+/* Section Contact*/
+.sectionContact{
+    background-color: $dark;
+    color: white;
+    font-family: $FuentePixel;
+    font-size: 30px;
+}
+/* End Section Contact*/
+
+/* Footer */
+.footerCustom {
+    background-color: $dark;
+    font-family: $FuentePixel;
+    font-size: 20px;
+    user-select: none;
+}
+
+.footerCustomRS {
+    color: $rosado-intenso;
+}
+.footerCustomRS:hover {
+    transition: 0.5s;
+    color: $verde-lima;
+}
+
+/* End Footer */
