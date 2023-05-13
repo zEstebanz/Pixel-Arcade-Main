@@ -96,6 +96,11 @@
 .indexCoverBack .textCustom {
   color: #00FF7F;
 }
+.indexCoverBack .textCustomAdmin {
+  background-color: rgba(0, 0, 0, 0.801);
+  color: white;
+  font-size: 30px;
+}
 
 .gameBack {
   background-color: #242424;

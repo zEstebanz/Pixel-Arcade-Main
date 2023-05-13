@@ -53,7 +53,7 @@ export function FormSignin() {
             console.log(res);
         }
 
-        router.push('/admin');
+        router.push('/game');
     };
 
     return (
@@ -66,7 +66,7 @@ export function FormSignin() {
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
 
-                        <form className={`${estilos.formSigninText}`}>
+                        <form className={`${estilos.formSigninText}`} onSubmit={handleSubmit}>
                             <div className="mb-1">
                                 <label htmlFor="nombre" className="form-label">Nombre completo</label>
                                 <input type="text" className="form-control" id="nombre" name="nombre" onChange={handleChange} value={usuario.nombre} required />

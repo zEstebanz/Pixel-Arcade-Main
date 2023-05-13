@@ -7,28 +7,27 @@ import estilos from '../public/css/style.module.css'
 function Admin({ usuarios }) {
     return (
         <Container>
-            <div>
-                <h1>Usuarios</h1>
+            <div className={`${estilos.indexCoverBack}`}>
+                <h1 className={`${estilos.titleCover}`}>Usuarios</h1>
+                {usuarios.map((usuario) => (
+                    <Link href={`/users/${usuario.id}`} key={usuario.id}>
+                        <div className="container">
+                            <table className={`${estilos.textCustomAdmin} table`}>
+                                <thead>
+                                    <tr>
+                                        <th>Nombre: {usuario.nombre}</th>
+                                        <th>Email: {usuario.email}</th>
+                                        <th>Edad: {usuario.edad} años</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {/* Aquí se insertarán los datos de los usuarios */}
+                                </tbody>
+                            </table>
+                        </div>
+                    </Link>
+                ))}
             </div>
-            {usuarios.map((usuario) => (
-                <Link href={`/users/${usuario.id}`} key={usuario.id}>
-                    <div className="container">
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>Nombre: {usuario.nombre}</th>
-                                    <th>Email: {usuario.email}</th>
-                                    <th>Edad: {usuario.edad} años</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* Aquí se insertarán los datos de los usuarios */}
-                            </tbody>
-                        </table>
-                    </div>
-                </Link>
-            ))}
-
         </Container>
     )
 }
