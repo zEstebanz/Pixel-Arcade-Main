@@ -1,5 +1,5 @@
 import estilos from '../../public/css/style.module.css'
-import Container from '../components/Container';
+import Container from '../../components/Container';
 
 const bomberman = () => {
     return (

@@ -18,6 +18,7 @@ function Admin({ usuarios }) {
                                         <th>Nombre: {usuario.nombre}</th>
                                         <th>Email: {usuario.email}</th>
                                         <th>Edad: {usuario.edad} años</th>
+                                        <th>Password: {usuario.password}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

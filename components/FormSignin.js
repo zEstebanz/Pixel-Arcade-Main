@@ -53,7 +53,7 @@ export function FormSignin() {
             console.log(res);
         }
 
-        router.push('/game');
+        router.push('/admin');
     };
 
     return (
