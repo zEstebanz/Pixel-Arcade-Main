@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import estilos from '../public/css/style.module.css'
 import Link from 'next/link';
+import { FirebaseContext } from '../firebase'
+
 
 const Footer = () => {
+    const { usuario, firebase } = useContext(FirebaseContext);
+
     return (
         <footer className={`${estilos.footerCustom} text-white py-5`}>
             <div className="container">
@@ -25,13 +30,23 @@ const Footer = () => {
 
                         </ul>
                     </div>
-                    <div className="col-md-4">
-                        <h4 className="mb-4">Signin</h4>
-                        <Link class={`${estilos.btnCustomLargo} nes-btn`} href="/signin">Signin</Link>
-                        <hr></hr>
-                        <h4 className="mb-4">Login</h4>
-                        <Link class={`${estilos.btnCustomLargo} nes-btn`} href="/login">Login</Link>
-                    </div>
+
+                    {/* Si existe el usuario entonces */}
+                    {usuario ? (
+                        <div className="col-md-4">
+                            <h4 className="mb-4">Cerrar Sesión</h4>
+                            <Link class={`${estilos.btnCustomLargo} nes-btn`} href="/signin">SignOut</Link>
+                        </div>
+                    ) : (
+                        <div className="col-md-4">
+                            <h4 className="mb-4">Signin</h4>
+                            <Link class={`${estilos.btnCustomLargo} nes-btn`} href="/signin">Signin</Link>
+                            <hr></hr>
+                            <h4 className="mb-4">Login</h4>
+                            <Link class={`${estilos.btnCustomLargo} nes-btn`} href="/login">Login</Link>
+                        </div>
+                    )}
+
                 </div>
                 <hr />
                 <div className="text-center">

@@ -1,62 +1,68 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from "react";
-import estilos from '../public/css/style.module.css';
-import axios from 'axios';
+import React, { useState } from 'react';
+import Router from 'next/router';
+import { MensajeError } from './ui/Formulario';
+import estilos from '../public/css/style.module.css'
+import firebase from '../firebase/index';
 
-export default function FormLogin() {
+// validaciones
+import useValidacion from '../hooks/useValidacion';
+import validarIniciarSesion from '../validacion/validacionIniciarSesion';
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+const STATE_INICIAL = {
+    email: '',
+    password: ''
+}
 
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
+const FormLogin = () => {
+    {
 
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
+        const [error, guardarError] = useState(false);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+        const { valores, errores, handleSubmit, handleChange, handleBlur } = useValidacion(STATE_INICIAL, validarIniciarSesion, iniciarSesion);
 
-        const { error } = await verifyCredentials(email, password);
+        const { email, password } = valores;
 
-        if (error) {
-            setError(error);
-            return;
+        async function iniciarSesion() {
+            try {
+                await firebase.login(email, password);
+                Router.push('/')
+            } catch (error) {
+                console.error('Hubo un error al autenticar el usuario', error.message);
+                guardarError(error.message);
+            }
         }
 
-        // Aquí es donde podrías redirigir al usuario a la página de inicio de la aplicación
-        window.location.href = '/';
+        return (
+            <div className={estilos.indexCoverBack}>
 
-    };
+                <div class="d-flex justify-content-center align-items-center pt-5">
+                    <div class="card p-4 shadow">
+                        <h1 class="text-center">Iniciar Sesión</h1>
+                        <form onSubmit={handleSubmit} noValidate>
 
-    return (
-        <div className={estilos.indexCoverBack}>
-
-            <div className={`${estilos.formSignin} container pt-5 pb-5`}>
-                <h2 className={`${estilos.textSubTituloPixel}`}>Iniciar Seción</h2>
-
-                <div className="row justify-content-center">
-                    <div className="col-lg-6">
-                        <form className={`${estilos.formSigninText}`} onSubmit={handleSubmit}>
-
-                            <div className="mb-1">
-                                <label htmlFor="email" className="form-label">Correo electrónico</label>
-                                <input type="email" className="form-control" id="email" name="email" required onChange={handleEmailChange} value={email} />
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Tu Email" name="email" value={email} onChange={handleChange} />
                             </div>
-                            <div className="mb-1">
-                                <label htmlFor="password" className="form-label">Contraseña</label>
-                                <input type="password" className="form-control" id="password" name="password" required onChange={handlePasswordChange} value={password} />
-                            </div>
+                            {errores.email && <MensajeError>{errores.email}</MensajeError>}
 
-                            <button type="submit" className={`${estilos.formSigninText} nes-btn mt-4`} >Ingresar</button>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" placeholder="Tu Password" name="password" value={password} onChange={handleChange} />
+                            </div>
+                            {errores.password && <MensajeError>{errores.password}</MensajeError>}
+
+                            {error && <MensajeError>{error}</MensajeError>}
+
+                            <input type="submit" class="btn btn-primary" value="Iniciar Sesión" />
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-    );
 
+            </div>
+        )
+
+    }
 }
+
+export default FormLogin;
