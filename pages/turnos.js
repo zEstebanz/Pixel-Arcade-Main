@@ -23,7 +23,7 @@ const turnos = () => {
                 <div>
                     <div class="d-flex justify-content-center align-items-center mt-5">
                         <div class="card p-4 shadow">
-                            <h1 class="text-center">Crear Cuenta</h1>
+                            <h1 class="text-center">Crear Turnos</h1>
                             <form>
                                 <div>
                                     <div className="mb-3">

@@ -85,6 +85,12 @@
   background-color: rgba(0, 0, 0, 0.534);
 }
 
+.titleCustom {
+  text-align: center;
+  color: white;
+  font-family: "VT323", monospace;
+}
+
 /* FIn Textos, Titulos, P.*/
 /* Background */
 .indexCoverBack {
